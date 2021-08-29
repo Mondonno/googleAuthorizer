@@ -8,7 +8,7 @@ import (
 	"encoding/base32"
 )
 
-func GenerateKey(key) {
+func GenerateKey(key string) string {
 	validKey := Base32ToHex(key)
 	if(len(validKey) % 2 == 0) {
 		validKey += "0"

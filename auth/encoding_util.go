@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func Base32ToHex() {
+func Base32ToHex() string {
 	base32chars := "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
     bits := "";
     hexValue := "";
