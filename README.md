@@ -1,7 +1,7 @@
 ## Google Authorizer CLI
 
 So simple, so cute UwU<br>
-This is just a simple switch to *`console mode`*<br><br>
+This is just a simple switch to *`console mode`*<br>
 
 If you wondering how it works, here is your answer:
 > It uses HMAC SHA-256 to generate 6 digit codes
