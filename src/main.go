@@ -14,7 +14,7 @@ func start(key string) {
 }
 
 func main() {
-	key = flag.String("key", "", "Gauth key used to generate new auth 6 digit key")
+	key := flag.String("key", "", "Gauth key used to generate new auth 6 digit key")
 	flag.Parse();
 
 	if(key == "") {

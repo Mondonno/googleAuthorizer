@@ -6,8 +6,8 @@ import (
 	"gauth"
 )
 
-startSecounds = 30
-currentKey = ""
+var startSecounds = 30
+var currentKey = ""
 
 func StartLooping(key string) {
 	setNewAccessKey()
@@ -30,7 +30,7 @@ func setNewAccessKey(key string) {
 }
 
 func repeatlyGetCode(key string) bool {
-	epoch, countDown = gauth.GetCurrentEpoch()
+	epoch, countDown := gauth.GetCurrentEpoch()
 
 	if(epoch % 30 === 0) {
 		setNewAccessKey(key)

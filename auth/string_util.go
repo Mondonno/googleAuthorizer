@@ -5,7 +5,7 @@ import (
 )
 
 func LeftPad(str string, length int, pad int) string {
-	newString = str;
+	newString := str;
 	if(length + 1 >= len(str)) {
 		newString = strconv.Itoa(pad).repeat(length) + str
 	}

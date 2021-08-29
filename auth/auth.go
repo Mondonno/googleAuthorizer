@@ -9,22 +9,22 @@ import (
 )
 
 func GenerateKey(key) {
-	validKey = Base32ToHex(key)
+	validKey := Base32ToHex(key)
 	if(len(validKey) % 2 == 0) {
 		validKey += "0"
 	}
 
-	currentMl = time.Now().UTC().UnixNano() / 1e6
-	epoch = currentMl / 1000
+	currentMl := time.Now().UTC().UnixNano() / 1e6
+	epoch := currentMl / 1000
 
-	currentTime = LeftPad(DecimalToHex(math.floor(epoch)), 16, "0")
+	currentTime := LeftPad(DecimalToHex(math.floor(epoch)), 16, "0")
 
-	hmacObj = hmac.New(sha256.New, []byte(validKey))
+	hmacObj := hmac.New(sha256.New, []byte(validKey))
 	hmacObj.Write([]byte(currentTime))
 
-	hmacSha = hmacObj.sum(nil)
+	hmacSha := hmacObj.sum(nil)
 
-	offset = 0
-	otp = (HexToDecimal(hmacSha[(offset * 2):8]) & HexToDecimal("7fffffff")) + ""
+	offset := 0
+	otp := (HexToDecimal(hmacSha[(offset * 2):8]) & HexToDecimal("7fffffff")) + ""
 	return toString((otp)[(len(otp) - 6):6])
 }
