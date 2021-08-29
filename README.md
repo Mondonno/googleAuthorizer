@@ -1,14 +1,14 @@
 # Google Authorizer CLI
+CLI that allows to generate `6-digit` auth numbers for 2fa without mobile app
 
-So simple, so cute UwU<br>
-This is just a simple switch to *`console mode`*<br>
-
-If you wondering how it works, here is your answer:
-> It uses HMAC SHA-256 to generate 6 digit codes
-It is something that google authorizer uses, but on console.
+It uses HMAC SHA-256, and some other tools to generate auth code.
+After that it is displayed on console and nothing else.
 
 You can use it for setting every 2fa where Google Authorizer is mentioned<br>
-And.. ah the syntax is `gauth --key hereYourKey`<br>
+
+## Syntax
+
+The syntax is `gauth --key hereYourKey`<br>
 In place of `hereYourKey` place your manual 2fa secret.
 
 ## Building
