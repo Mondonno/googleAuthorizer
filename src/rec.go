@@ -11,6 +11,8 @@ var currentKey = ""
 
 func StartLooping(key string) {
 	setNewAccessKey()
+
+	repeat(key)
 	for range time.Tick(time.Second * 1) {
 		repeat(key)
 	}
