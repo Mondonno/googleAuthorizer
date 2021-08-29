@@ -4,7 +4,7 @@ import (
 	"time",
 	"crypto/hmac"
     "crypto/sha256"
-	"encoding/hex",
+	"encoding/hex"
 	"encoding/base32"
 )
 
