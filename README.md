@@ -1,5 +1,5 @@
 # Google Authorizer CLI
-CLI that allows to generate `6-digit` auth numbers for 2fa without mobile app
+Simple CLI that allows to generate `6-digit` auth numbers for 2fa without mobile app
 
 It uses `HMAC`, `SHA-256` and some other tools to generate auth code.
 After that it is displayed on console and nothing else.
