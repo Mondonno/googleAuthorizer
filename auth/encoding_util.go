@@ -10,12 +10,12 @@ func Base32ToHex() string {
     bits := "";
     hexValue := "";
 
-    for (let i = 0; i < base32.length; i++) {
+    for i = 0; i < len(base32); i++ {
         val := base32chars.Index(base32[i].ToUpper());
         bits += LeftPad(toBinary(val), 5, '0');
     }
 
-    for (i = 0; i + 4 <= bits.length; i += 4) {
+    for i = 0; i + 4 <= len(bits); i += 4 {
         chunk := bits[i:4];
         hexValue = hexValue + hex.EncodeToString([]byte(chunk)); // .toString(16)
     }
